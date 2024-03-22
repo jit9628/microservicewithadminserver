@@ -1,0 +1,46 @@
+logging:
+  file:
+    name: demo_api.log
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+      max-history: 5
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+server:
+  port: 8080
+spring:
+  application:
+    name: Order-Api
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+        
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    password: root
+#    url: jdbc:postgresql://localhost:5432/MICROSERVICES
+#    username: postgres
+#    
+#  jpa:
+#    hibernate:
+#       properties: 
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#       ddl-auto: update
+       
+      
+#    jpa:
+#        hibernate:
+#            ddl-auto: update
+#        properties:
+#            hibernate:
+#                dialect: org.hibernate.dialect.PostgreSQLDialect
+#        #format_sql: true
+#        show-sql: true
